@@ -27,7 +27,7 @@ public class Main extends ListenerAdapter {
 
 
         JDA api = new JDABuilder(AccountType.BOT)
-                .setToken("NTM0ODgxMjMyNjM5NjIzMTc4.DyACrA.QhZIvgiF3G_h4jnt68S4iz2aogc")
+                .setToken(args[0])
                 .setStatus(OnlineStatus.ONLINE)
                 .addEventListener(waiter)
                 .addEventListener(client.build())
