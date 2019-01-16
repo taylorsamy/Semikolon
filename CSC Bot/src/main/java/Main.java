@@ -1,11 +1,11 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.Ping;
+import commands.RoleMenu;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
-import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 import javax.security.auth.login.LoginException;
@@ -18,10 +18,9 @@ public class Main extends ListenerAdapter {
         client.useDefaultGame();
         client.setOwnerId("127899667584385024");
         client.setPrefix("!");
-
-
         client.addCommands(
-            new Ping()
+                new Ping(),
+                new RoleMenu()
         );
 
 
