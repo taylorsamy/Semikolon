@@ -20,7 +20,8 @@ public class ReactionEvent extends ListenerAdapter {
         MessageReaction.ReactionEmote emote = reaction.getReactionEmote();
         MessageChannel channel = event.getChannel();
         if (event.getMessageId().equals(messageID)) {
-            channel.sendMessage("?").queue();
+
+            channel.sendMessage(emote.getEmote().toString()).queue();
         }
     }
 }
