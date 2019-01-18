@@ -18,7 +18,7 @@ public class RoleMenu extends Command {
     protected void execute(CommandEvent event) {
 
         event.reply("Please pick a class", message -> {
-            message.addReaction("u+20E3").queue();
+            message.addReaction("1\u20E3").queue();
             reactionEvent = new ReactionEvent(message.getId());
             event.getJDA().addEventListener(reactionEvent);
         });

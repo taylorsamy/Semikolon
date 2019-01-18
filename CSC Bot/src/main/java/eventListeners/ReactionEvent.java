@@ -21,7 +21,11 @@ public class ReactionEvent extends ListenerAdapter {
         MessageChannel channel = event.getChannel();
         if (event.getMessageId().equals(messageID)) {
 
-            channel.sendMessage(emote.getEmote().toString()).queue();
+            channel.sendMessage(event.getMember().getEffectiveName() + " reacted with " + emote.getName()).queue();
+
+            if (emote.isEmote()) {
+                channel.sendMessage(emote.getId()).queue();
+            }
         }
     }
 }
