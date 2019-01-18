@@ -6,7 +6,7 @@ import eventListeners.ReactionEvent;
 
 public class RoleMenu extends Command {
 
-    ReactionEvent reactionEvent;
+    private ReactionEvent reactionEvent;
 
     public RoleMenu() {
         this.name = "roles";
