@@ -9,6 +9,7 @@ import net.dv8tion.jda.core.managers.GuildController;
 
 public class ReactionEvent extends ListenerAdapter {
 
+    //ID of the message to listen to
     private String messageID;
 
     public ReactionEvent(String messageID) {
@@ -17,11 +18,9 @@ public class ReactionEvent extends ListenerAdapter {
 
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
-        MessageReaction reaction = event.getReaction();
-        MessageReaction.ReactionEmote emote = reaction.getReactionEmote();
+        MessageReaction.ReactionEmote emote = event.getReactionEmote();
         GuildController guild = new GuildController(event.getGuild());
         if (event.getMessageId().equals(messageID)) {
-
             if (!event.getUser().isBot()) {
                 if (emote.isEmote()) {
                     switch (emote.getName()) {
@@ -51,7 +50,6 @@ public class ReactionEvent extends ListenerAdapter {
     public void onMessageReactionRemove(MessageReactionRemoveEvent event) {
         MessageReaction.ReactionEmote emote = event.getReactionEmote();
         GuildController guild = new GuildController(event.getGuild());
-
         if (emote.isEmote()) {
             switch (emote.getName()) {
                 case "1501":

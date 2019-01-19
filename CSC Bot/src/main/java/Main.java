@@ -1,7 +1,7 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.Ping;
-import commands.RoleMenu;
+import commands.Welcome;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -20,7 +20,7 @@ public class Main extends ListenerAdapter {
         client.setPrefix("!");
         client.addCommands(
                 new Ping(),
-                new RoleMenu()
+                new Welcome()
         );
 
 
