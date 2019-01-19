@@ -18,6 +18,8 @@ public class Welcome extends Command {
     @Override
     protected void execute(CommandEvent event) {
 
+        //get emotes from guild
+
         Emote comp1501 = event.getGuild().getEmoteById(536076160220528640L);
         Emote comp1502 = event.getGuild().getEmoteById(536076678322061312L);
         Emote comp2511 = event.getGuild().getEmoteById(536078381796818961L);
