@@ -1,5 +1,6 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
+import commands.Disappointment;
 import commands.Ping;
 import commands.Welcome;
 import net.dv8tion.jda.core.AccountType;
@@ -20,7 +21,8 @@ public class Main extends ListenerAdapter {
         client.setPrefix("!");
         client.addCommands(
                 new Ping(),
-                new Welcome()
+                new Welcome(),
+                new Disappointment()
         );
 
 
