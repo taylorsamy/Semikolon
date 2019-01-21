@@ -2,7 +2,7 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import net.dv8tion.jda.core.entities.Member;
+import net.dv8tion.jda.core.entities.User;
 
 public class Disappointment extends Command {
 
@@ -12,7 +12,7 @@ public class Disappointment extends Command {
 
     @Override
     protected void execute(CommandEvent event) {
-        Member sender = event.getMember();
-        event.reply("<@" + sender.getUser().getId() + "> is a huge disappointment");
+        User sender = event.getAuthor();
+        event.reply("<@" + sender.getId() + "> is a huge disappointment");
     }
 }
