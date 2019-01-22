@@ -12,6 +12,7 @@ public class Welcome extends Command {
     public Welcome() {
         this.name = "welcome";
         this.ownerCommand = true;
+        this.hidden = true;
 
     }
 

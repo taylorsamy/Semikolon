@@ -8,11 +8,25 @@ public class Disappointment extends Command {
 
     public Disappointment() {
         this.name = "disappointment";
+        //this.cooldown = 60;
     }
 
     @Override
     protected void execute(CommandEvent event) {
+
+        String[] args = event.getArgs().split(" ");
+        String test = args[0].replaceAll("[^\\d.]", "");
+
         User sender = event.getAuthor();
-        event.reply("<@" + sender.getId() + "> is a huge disappointment");
+        try {
+            User u = event.getGuild().getMemberById(test).getUser();
+            event.reply("<@" + sender.getId() + "> thinks <@" + u.getId() + "> is a huge disappointment");
+        } catch (IllegalArgumentException e) {
+            event.reply("<@" + sender.getId() + "> is a huge disappointment");
+        }
+
+
+
+
     }
 }
