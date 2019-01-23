@@ -20,7 +20,13 @@ public class Disappointment extends Command {
         User sender = event.getAuthor();
         try {
             User u = event.getGuild().getMemberById(test).getUser();
-            event.reply("<@" + sender.getId() + "> thinks <@" + u.getId() + "> is a huge disappointment");
+            if (u.getName().equals("Computer Science Club")) {
+                event.reply("<@" + sender.getId() + "> is a big meanie!");
+            } else if (u == event.getAuthor()) {
+                event.reply("<@" + sender.getId() + "> is a little confused....");
+            } else {
+                event.reply("<@" + sender.getId() + "> thinks <@" + u.getId() + "> is a huge disappointment");
+            }
         } catch (IllegalArgumentException e) {
             event.reply("<@" + sender.getId() + "> is a huge disappointment");
         }
