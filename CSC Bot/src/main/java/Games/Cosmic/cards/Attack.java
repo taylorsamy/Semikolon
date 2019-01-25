@@ -8,7 +8,7 @@ public class Attack extends Encounter{
     this.atkValue = atkValue;
   }
   
-  public void getAttack() {
+  public int getAttack() {
     return this.atkValue; 
   }
 
