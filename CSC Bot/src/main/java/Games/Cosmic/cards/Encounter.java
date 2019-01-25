@@ -4,16 +4,16 @@ public class Encounter extends Card {
 
   public enum Type{ATTACK, NEGOTIATE, MORPH}
   
-  private int atkValue;
+  private int attackValue;
   private Type encounterType;
   
   public Encounter(Type encounterType) {
     this.encounterType = encounterType;
-    this.atkValue = 0;
+    this.attackValue = 0;
   }
   
   public int getAttack() {
-    return this.atkValue; 
+    return this.attackValue; 
   }
   
   public Type getType() {
@@ -21,7 +21,7 @@ public class Encounter extends Card {
   }
   
   public void setAttack(int attackValue) {
-    this.attackValue = atkValue; 
+    this.attackValue = attackValue; 
   }
 
 }
