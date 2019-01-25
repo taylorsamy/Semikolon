@@ -1,4 +1,4 @@
-package Games.Cosmic.cards;
+package games.cosmic.cards;
 
 public class Encounter extends Card {
 }

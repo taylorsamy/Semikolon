@@ -1,6 +1,6 @@
-package Games.Cosmic;
+package games.cosmic;
 
-import Games.Cosmic.cards.Card;
+import games.cosmic.cards.Card;
 
 import java.util.ArrayList;
 

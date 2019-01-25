@@ -1,4 +1,4 @@
-package Games.Cosmic;
+package games.cosmic;
 
 public class Cosmic {
 
