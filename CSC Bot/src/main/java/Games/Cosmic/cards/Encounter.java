@@ -17,11 +17,11 @@ public class Encounter extends Card {
   }
   
   public Type getType() {
-    return this.enounterType;
+    return this.encounterType;
   }
   
   public void setAttack(int attackValue) {
-    this.attackValue = attackValue; 
+    this.attackValue = atkValue; 
   }
 
 }
