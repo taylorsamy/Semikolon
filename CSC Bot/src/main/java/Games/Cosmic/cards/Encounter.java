@@ -21,7 +21,9 @@ public class Encounter extends Card {
   }
   
   public void setAttack(int attackValue) {
-    this.attackValue = attackValue; 
+      this.attackValue = attackValue;
   }
+
+
 
 }
