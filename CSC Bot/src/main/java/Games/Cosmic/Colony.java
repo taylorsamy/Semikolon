@@ -3,19 +3,21 @@ package games.cosmic;
 public class Colony {
 
     private int ships;
+    private Planet planet;
+    private Player owner;
 
-    private Player.Colour system;
+    //private Planet planet;
 
-    public Colony(int ships, Player.Colour system) {
+    public Colony(int ships, Player owner, Planet planet) {
         this.ships = ships;
-        this.system = system;
+        this.planet = planet;
+        this.owner = owner;
     }
 
     public int getShips() {
         return ships;
     }
-
-    public Player.Colour getSystem() {
-        return system;
-    }
+    
+    
+    
 }
