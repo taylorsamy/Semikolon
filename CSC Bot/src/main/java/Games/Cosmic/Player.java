@@ -10,6 +10,7 @@ public class Player {
         RED, GREEN, BLUE, YELLOW, PURPLE
     }
 
+    private Game game;
     private ArrayList<Colony> colonies;
     private ArrayList<Card> hand;
     private ArrayList<Player> allies;
@@ -18,14 +19,43 @@ public class Player {
 
     private Colour colour;
 
-    public Player(int playerNumber) {
+    public Player(int playerNumber, Game game) {
         playerNum = playerNumber;
+        this.game = game;
         initPlayer();
         initColonies();
     }
 
     private void initColonies(){
-        //for ()
+
+        switch (colour) {
+            case RED:
+                for (Planet p : game.redPlanets) {
+                    p.addColony(new Colony(4, this, p));
+                }
+                break;
+            case GREEN:
+                for (Planet p : game.greenPlanets) {
+                    p.addColony(new Colony(4, this, p));
+                }
+                break;
+            case BLUE:
+                for (Planet p : game.bluePlanets) {
+                    p.addColony(new Colony(4, this, p));
+                }
+                break;
+            case YELLOW:
+                for (Planet p : game.yellowPlanets) {
+                    p.addColony(new Colony(4, this, p));
+                }
+                break;
+            case PURPLE:
+                for (Planet p : game.purplePlanets) {
+                    p.addColony(new Colony(4, this, p));
+                }
+                break;
+        }
+
     }
 
     private void initPlayer() {
