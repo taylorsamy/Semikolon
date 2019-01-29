@@ -27,6 +27,7 @@ public class Game {
     //this.playerTurn = 
     this.currentPhase = EncounterPhase.REGROUP;
     initPlanets();
+    initPlayers();
   }
 
   private void initPlanets() {
