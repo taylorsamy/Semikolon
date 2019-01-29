@@ -6,9 +6,11 @@ public class Game {
   private EncounterPhase currentPhase;
   
   private int numPlayers;
+  private int playerTurn;
   
   public Game(int numPlayers) {
     this.numPlayers = numPlayers;
+    //this.playerTurn = 
     this.currentPhase = EncounterPhase.REGROUP;
   }
 
