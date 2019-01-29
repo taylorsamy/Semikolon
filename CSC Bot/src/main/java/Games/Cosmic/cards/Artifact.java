@@ -1,6 +1,6 @@
 package games.cosmic.cards;
 
-public class Artifact extends Card {
+public class Artifact extends CosmicCard {
 
   
 

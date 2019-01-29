@@ -1,4 +1,4 @@
 package games.cosmic.cards;
 
-public class Reinforcement extends Card {
+public class Reinforcement extends CosmicCard {
 }

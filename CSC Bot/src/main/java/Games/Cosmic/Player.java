@@ -1,6 +1,6 @@
 package games.cosmic;
 
-import games.cosmic.cards.Card;
+import games.cosmic.cards.CosmicCard;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ public class Player {
 
     private Game game;
     private ArrayList<Colony> colonies;
-    private ArrayList<Card> hand;
+    private ArrayList<CosmicCard> hand;
     private ArrayList<Player> allies;
 
     private int playerNum;
