@@ -26,6 +26,10 @@ public class Player {
         initColonies();
     }
 
+    public Colour getColour() {
+        return colour;
+    }
+
     private void initColonies() {
 
         switch (colour) {

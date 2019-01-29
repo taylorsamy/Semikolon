@@ -54,6 +54,10 @@ public class Game {
         }
     }
 
+    public ArrayList<Player> getPlayers() {
+        return players;
+    }
+
     private void initCosmicDeck() {
         deck = new LinkedList<>();
         // -------------- Encounter cards --------------------------
