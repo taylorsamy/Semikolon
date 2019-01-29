@@ -1,6 +1,6 @@
 package games.cosmic.cards;
 
-public class Technology extends Card {
+public class Technology{
   
   private int researchNum;
   
