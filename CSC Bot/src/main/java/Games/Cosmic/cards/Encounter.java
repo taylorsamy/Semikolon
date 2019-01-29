@@ -2,7 +2,9 @@ package games.cosmic.cards;
 
 public class Encounter extends Card {
 
-  public enum Type{ATTACK, NEGOTIATE, MORPH}
+  public enum Type{
+    ATTACK, NEGOTIATE, MORPH
+  };
   
   private int attackValue;
   private Type encounterType;
