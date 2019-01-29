@@ -7,6 +7,7 @@ public class Game {
   
   public Game(int numPlayers) {
     this.numPlayers = numPlayers;
+    this.currentPhase = EncounterPhase.REGROUP;
   }
 
 }
