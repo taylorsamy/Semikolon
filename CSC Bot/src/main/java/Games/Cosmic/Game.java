@@ -1,6 +1,9 @@
 package games.cosmic;
 
+import games.cosmic.cards.CosmicCard;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import static games.cosmic.Player.Colour.*;
 
@@ -14,6 +17,7 @@ public class Game {
   private int numPlayers;
   private int playerTurn;
   private ArrayList<Player> players;
+  private LinkedList<CosmicCard> deck;
 
 
   public Planet[] redPlanets;
@@ -52,6 +56,52 @@ public class Game {
     for (int i = 0; i < numPlayers; i++) {
       players.add(new Player(i, this));
     }
+  }
+
+  private void initCosmicDeck() {
+//    Cosmic Deck
+//
+//    Encounter Cards
+//
+//    1x Attack 00
+//    1x Attack 01
+//    4x Attack 04
+//    1x Attack 05
+//    7x Attack 06
+//    1x Attack 07
+//    7x Attack 08
+//    1x Attack 09
+//    4x Attack 10
+//    1x Attack 11
+//    2x Attack 12
+//    1x Attack 13
+//    2x Attack 14
+//    1x Attack 15
+//    2x Attack 20
+//    1x Attack 23
+//    1x Attack 30
+//    1x Attack 40
+//
+//    1x Morph
+//    15x Negotiate
+//
+//    Reinforcement Cards
+//
+//    2x Reinforcement +2
+//    3x Reinforcement +3
+//    1x Reinforcement +5
+//
+//    Artifact Cards
+//
+//    2x Card Zap
+//    2x Cosmic Zap
+//    1x Emotion Control
+//    1x Force Field
+//    1x Ionic Gas
+//    2x Moebius Tubes
+//    1x Plague
+//    1x Quash
+
   }
 
 
