@@ -26,7 +26,7 @@ public class Player {
         initColonies();
     }
 
-    private void initColonies(){
+    private void initColonies() {
 
         switch (colour) {
             case RED:
@@ -77,7 +77,6 @@ public class Player {
                 break;
         }
     }
-
 
 
 }

@@ -17,7 +17,6 @@ public class Colony {
     public int getShips() {
         return ships;
     }
-    
-    
-    
+
+
 }
