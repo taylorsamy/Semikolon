@@ -19,4 +19,11 @@ public class Colony {
     }
 
 
+    public Planet getPlanet() {
+        return planet;
+    }
+
+    public Player getOwner() {
+        return owner;
+    }
 }

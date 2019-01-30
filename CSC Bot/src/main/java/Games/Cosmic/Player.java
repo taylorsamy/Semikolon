@@ -22,6 +22,7 @@ public class Player {
     public Player(int playerNumber, Game game) {
         playerNum = playerNumber;
         this.game = game;
+        colonies = new ArrayList<>();
         initPlayer();
         initColonies();
     }
@@ -30,32 +31,36 @@ public class Player {
         return colour;
     }
 
+    public ArrayList<Colony> getColonies() {
+        return colonies;
+    }
+
     private void initColonies() {
 
         switch (colour) {
             case RED:
                 for (Planet p : game.redPlanets) {
-                    p.addColony(new Colony(4, this, p));
+                    colonies.add(p.addColony(new Colony(4, this, p)));
                 }
                 break;
             case GREEN:
                 for (Planet p : game.greenPlanets) {
-                    p.addColony(new Colony(4, this, p));
+                    colonies.add(p.addColony(new Colony(4, this, p)));
                 }
                 break;
             case BLUE:
                 for (Planet p : game.bluePlanets) {
-                    p.addColony(new Colony(4, this, p));
+                    colonies.add(p.addColony(new Colony(4, this, p)));
                 }
                 break;
             case YELLOW:
                 for (Planet p : game.yellowPlanets) {
-                    p.addColony(new Colony(4, this, p));
+                    colonies.add(p.addColony(new Colony(4, this, p)));
                 }
                 break;
             case PURPLE:
                 for (Planet p : game.purplePlanets) {
-                    p.addColony(new Colony(4, this, p));
+                    colonies.add(p.addColony(new Colony(4, this, p)));
                 }
                 break;
         }
