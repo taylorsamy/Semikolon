@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PlayerTest {
+public class PlayerTest { // added comment for testing
 
     @Test
     public void testPlayerColours() {
