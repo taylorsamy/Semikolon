@@ -64,7 +64,6 @@ public class Player {
                 }
                 break;
         }
-
     }
 
     private void initPlayer() {
@@ -86,6 +85,4 @@ public class Player {
                 break;
         }
     }
-
-
 }

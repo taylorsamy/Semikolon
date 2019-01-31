@@ -96,32 +96,6 @@ public class Game {
         }
 
 
-//    Cosmic Deck
-//
-//    Encounter Cards
-//
-//    1x Attack 00 //
-//    1x Attack 01 //
-//    4x Attack 04 //
-//    1x Attack 05 //
-//    7x Attack 06 //
-//    1x Attack 07 //
-//    7x Attack 08 //
-//    1x Attack 09 //
-//    4x Attack 10 //
-//    1x Attack 11//
-//    2x Attack 12//
-//    1x Attack 13
-//    2x Attack 14//
-//    1x Attack 15
-//    2x Attack 20//
-//    1x Attack 23
-//    1x Attack 30
-//    1x Attack 40
-//
-//    1x Morph
-//    15x Negotiate
-//
 //    Reinforcement Cards
 //
 //    2x Reinforcement +2
