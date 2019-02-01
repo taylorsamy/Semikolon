@@ -1,6 +1,6 @@
 package games.cosmic.cards;
 
-public class CosmicCard {
+public abstract class CosmicCard {
 
     protected Type cardType;
 
@@ -16,5 +16,9 @@ public class CosmicCard {
         FLARE,
         REINFORCEMENT
     }
+
+
+
+    public abstract int getAction();
 
 }

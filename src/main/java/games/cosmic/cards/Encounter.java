@@ -10,8 +10,8 @@ public class Encounter extends CosmicCard {
         this.cardType = cardType;
         this.attackValue = 0;
     }
-
-    public int getAttack() {
+    @Override
+    public int getAction() {
         return this.attackValue;
     }
 

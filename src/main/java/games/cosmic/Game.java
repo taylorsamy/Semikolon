@@ -21,6 +21,10 @@ public class Game {
     private ArrayList<Player> players;
     private LinkedList<CosmicCard> deck;
 
+    private enum EncounterPhase {
+        REGROUP, DESTINY, LAUNCH, ALLIANCE, PLANNING, REVEAL, RESOLUTION
+    }
+
     public Game(int numPlayers) {
         this.numPlayers = numPlayers;
         this.players = new ArrayList<>();
@@ -124,10 +128,6 @@ public class Game {
 
     private void addCardToDeck(CosmicCard.Type cardType) {
         deck.add(new Encounter(cardType));
-    }
-
-    private enum EncounterPhase {
-        REGROUP, DESTINY, LAUNCH, ALLIANCE, PLANNING, REVEAL, RESOLUTION
     }
 
 
