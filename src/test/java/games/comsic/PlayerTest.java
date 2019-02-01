@@ -21,11 +21,9 @@ public class PlayerTest { // added comment for testing
     @Test
     public void testPlayerColonies() {
         Game g = new Game(5);
-        assertEquals(g.getPlayers().get(0).getColonies().size(), 5);
-        assertEquals(g.getPlayers().get(1).getColonies().size(), 5);
-        assertEquals(g.getPlayers().get(2).getColonies().size(), 5);
-        assertEquals(g.getPlayers().get(3).getColonies().size(), 5);
-        assertEquals(g.getPlayers().get(4).getColonies().size(), 5);
+        for (Player p :g.getPlayers()) {
+            assertEquals(p.getColonies().size(), 5);
+        }
     }
 
 

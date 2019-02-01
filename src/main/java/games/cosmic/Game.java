@@ -6,8 +6,6 @@ import games.cosmic.cards.Encounter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import static games.cosmic.Player.Colour.*;
-
 public class Game {
 
     public Planet[] redPlanets;
@@ -18,45 +16,31 @@ public class Game {
     private EncounterPhase currentPhase;
     private int numPlayers;
     private int playerTurn;
-    private ArrayList<Player> players;
+    public ArrayList<Player> players;
     private LinkedList<CosmicCard> deck;
+
+    private GameInit init;
 
     private enum EncounterPhase {
         REGROUP, DESTINY, LAUNCH, ALLIANCE, PLANNING, REVEAL, RESOLUTION
     }
 
     public Game(int numPlayers) {
-        this.numPlayers = numPlayers;
+        this.numPlayers = numPlayers - 1;
         this.players = new ArrayList<>();
         //this.playerTurn =
         this.currentPhase = EncounterPhase.REGROUP;
-        initPlanets();
-        initPlayers();
+        this.init = new GameInit(this, this.numPlayers);
+        init();
     }
 
-    private void initPlanets() {
-        redPlanets = new Planet[]{
-                new Planet(RED), new Planet(RED), new Planet(RED), new Planet(RED), new Planet(RED)
-        };
-        greenPlanets = new Planet[]{
-                new Planet(GREEN), new Planet(GREEN), new Planet(GREEN), new Planet(GREEN), new Planet(GREEN)
-        };
-        bluePlanets = new Planet[]{
-                new Planet(BLUE), new Planet(BLUE), new Planet(BLUE), new Planet(BLUE), new Planet(BLUE)
-        };
-        yellowPlanets = new Planet[]{
-                new Planet(YELLOW), new Planet(YELLOW), new Planet(YELLOW), new Planet(YELLOW), new Planet(YELLOW)
-        };
-        purplePlanets = new Planet[]{
-                new Planet(PURPLE), new Planet(PURPLE), new Planet(PURPLE), new Planet(PURPLE), new Planet(PURPLE)
-        };
+    private void init() {
+        init.planets();
+        init.players();
+
+
     }
 
-    private void initPlayers() {
-        for (int i = 0; i < numPlayers; i++) {
-            players.add(new Player(i, this));
-        }
-    }
 
     public ArrayList<Player> getPlayers() {
         return players;
@@ -76,6 +60,19 @@ public class Game {
         addCardToDeck(CosmicCard.Type.ENCOUNTER, 23);
         addCardToDeck(CosmicCard.Type.ENCOUNTER, 30);
         addCardToDeck(CosmicCard.Type.ENCOUNTER, 40);
+        addCardToDeck(CosmicCard.Type.MORPH);
+
+        for (int i = 0; i < 2; i++) {
+            addCardToDeck(CosmicCard.Type.ENCOUNTER, 12);
+            addCardToDeck(CosmicCard.Type.ENCOUNTER, 14);
+            addCardToDeck(CosmicCard.Type.ENCOUNTER, 20);
+            addCardToDeck(CosmicCard.Type.REINFORCEMENT, 2);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            addCardToDeck(CosmicCard.Type.REINFORCEMENT, 3);
+        }
+
 
         for (int i = 0; i < 4; i++) {
             addCardToDeck(CosmicCard.Type.ENCOUNTER, 4);
@@ -87,25 +84,10 @@ public class Game {
             addCardToDeck(CosmicCard.Type.ENCOUNTER, 8);
         }
 
-        for (int i = 0; i < 2; i++) {
-            addCardToDeck(CosmicCard.Type.ENCOUNTER, 12);
-            addCardToDeck(CosmicCard.Type.ENCOUNTER, 14);
-            addCardToDeck(CosmicCard.Type.ENCOUNTER, 20);
-        }
-
-        addCardToDeck(CosmicCard.Type.MORPH);
-
         for (int i = 0; i < 15; i++) {
             addCardToDeck(CosmicCard.Type.NEGOTIATE);
         }
 
-
-//    Reinforcement Cards
-//
-//    2x Reinforcement +2
-//    3x Reinforcement +3
-//    1x Reinforcement +5
-//
 //    Artifact Cards
 //
 //    2x Card Zap
