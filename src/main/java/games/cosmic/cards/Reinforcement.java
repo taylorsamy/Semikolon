@@ -2,17 +2,13 @@ package games.cosmic.cards;
 
 public class Reinforcement extends CosmicCard {
 
-    private short atk;
-    private Type type;
 
-    public Reinforcement(Type type, short atk){
-        this.atk = atk;
-        this.type = type;
+
+    public Reinforcement(Type type, int atk){
+        this.action.setAtk(atk);
+        this.cardType = type;
     }
 
 
-    @Override
-    public int getAction() {
-        return atk;
-    }
+
 }

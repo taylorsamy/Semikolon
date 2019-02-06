@@ -2,9 +2,17 @@ package games.cosmic.cards;
 
 public class Artifact extends CosmicCard {
 
-
-    @Override
-    public int getAction() {
-        return 0;
+    public enum ArtifactType {
+        COSMIC_ZAP,
+        CARD_ZAP,
+        EMOTION_CONTROL,
+        FORCE_FIELD,
+        MOEBIUS_TUBES,
+        PLAGUE,
+        QUASH
     }
+
+    private ArtifactType type;
+
+
 }
