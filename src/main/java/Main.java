@@ -16,7 +16,7 @@ public class  Main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException {
         EventWaiter waiter = new EventWaiter();
         CommandClientBuilder client = new CommandClientBuilder();
-        ReactionEvent welcomeEvent = new ReactionEvent("536305136683843590");
+       ReactionEvent welcomeEvent = new ReactionEvent("619286757023678501");
 
         client.useDefaultGame();
         client.setOwnerId("127899667584385024");

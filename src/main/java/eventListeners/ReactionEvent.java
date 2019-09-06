@@ -16,6 +16,7 @@ public class ReactionEvent extends ListenerAdapter {
         this.messageID = messageID;
     }
 
+
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         MessageReaction.ReactionEmote emote = event.getReactionEmote();
@@ -40,6 +41,21 @@ public class ReactionEvent extends ListenerAdapter {
                             Role math1505 = event.getGuild().getRoleById(536081372582772745L);
                             guild.addRolesToMember(event.getMember(), math1505).queue();
                             break;
+                        case "2521":
+                            Role comp2521 = event.getGuild().getRoleById(619559249843978280L);
+                            guild.addRolesToMember(event.getMember(), comp2521).queue();
+                            break;
+                        case "2531":
+                            Role comp2531 = event.getGuild().getRoleById(619560422130974740L);
+                            guild.addRolesToMember(event.getMember(), comp2531).queue();
+                            break;
+                        case "2541":
+                            Role comp2541 = event.getGuild().getRoleById(619560954656718869L);
+                            guild.addRolesToMember(event.getMember(), comp2541).queue();
+                            break;
+                        case "jpns1105":
+                            Role jpns1105 = event.getGuild().getRoleById(619561574843285504L);
+                            guild.addRolesToMember(event.getMember(), jpns1105).queue();
                     }
                 }
             }
@@ -68,6 +84,22 @@ public class ReactionEvent extends ListenerAdapter {
                     Role math1505 = event.getGuild().getRoleById(536081372582772745L);
                     guild.removeRolesFromMember(event.getMember(), math1505).queue();
                     break;
+                case "2521":
+                    Role comp2521 = event.getGuild().getRoleById(619559249843978280L);
+                    guild.removeRolesFromMember(event.getMember(), comp2521).queue();
+                    break;
+                case "2531":
+                    Role comp2531 = event.getGuild().getRoleById(619560422130974740L);
+                    guild.removeRolesFromMember(event.getMember(), comp2531).queue();
+                    break;
+                case "2541":
+                    Role comp2541 = event.getGuild().getRoleById(619560954656718869L);
+                    guild.removeRolesFromMember(event.getMember(), comp2541).queue();
+                    break;
+                case "jpns1105":
+                    Role jpns1105 = event.getGuild().getRoleById(619561574843285504L);
+                    guild.removeRolesFromMember(event.getMember(), jpns1105).queue();
+
             }
         }
 

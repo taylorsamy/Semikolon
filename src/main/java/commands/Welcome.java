@@ -25,6 +25,11 @@ public class Welcome extends Command {
         Emote comp1502 = event.getGuild().getEmoteById(536076678322061312L);
         Emote comp2511 = event.getGuild().getEmoteById(536078381796818961L);
         Emote math1505 = event.getGuild().getEmoteById(536080017017405441L);
+        Emote comp2421 = event.getGuild().getEmoteById(619280408952963102L);
+        Emote comp2431 = event.getGuild().getEmoteById(619280409532039187L);
+        Emote comp2441 = event.getGuild().getEmoteById(619280409515261952L);
+        Emote jpns1105 = event.getGuild().getEmoteById(619280409498484736L);
+
 
         event.reply("Welcome everyone,\n" +
                 "This guild started out as a place for for a handful of 1501 students to hang out. " +
@@ -42,11 +47,19 @@ public class Welcome extends Command {
                 "\nCOMP-1501 <:1501:536076160220528640>" +
                 "\nCOMP-1502 <:1502:536076678322061312>" +
                 "\nCOMP-2511 <:2511:536078381796818961>" +
-                "\nMATH-1505 <:1505:536080017017405441>", message -> {
+                "\nMATH-1505 <:1505:536080017017405441>" +
+                "\nCOMP-2521 <:2521:619280408952963102>" +
+                "\nCOMP-2531 <:2531:619280409532039187>" +
+                "\nCOMP-2541 <:2541:619280409515261952>" +
+                "\nJPNS-1105 <:jpns1:619280409498484736>", message -> {
             message.addReaction(comp1501).queue();
             message.addReaction(comp1502).queue();
             message.addReaction(comp2511).queue();
             message.addReaction(math1505).queue();
+            message.addReaction(comp2421).queue();
+            message.addReaction(comp2431).queue();
+            message.addReaction(comp2441).queue();
+            message.addReaction(jpns1105).queue();
             reactionEvent = new ReactionEvent(message.getId());
             event.getJDA().addEventListener(reactionEvent);
         });
