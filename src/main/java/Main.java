@@ -3,6 +3,7 @@ import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.guilds.csc.Disappointment;
 import commands.Ping;
 import commands.guilds.csc.Welcome;
+import commands.guilds.dsc.Interests;
 import eventListeners.ReactionEvent;
 import eventListeners.UserJoinEvent;
 import net.dv8tion.jda.core.AccountType;
@@ -29,7 +30,8 @@ public class  Main extends ListenerAdapter {
         client.addCommands(
                 new Ping(),
                 new Welcome(),
-                new Disappointment()
+                new Disappointment(),
+                new Interests()
         );
 
 
