@@ -8,15 +8,19 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
+import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 import javax.security.auth.login.LoginException;
 
 public class  Main extends ListenerAdapter {
+
+
+
     public static void main(String[] args) throws LoginException {
         EventWaiter waiter = new EventWaiter();
         CommandClientBuilder client = new CommandClientBuilder();
-       ReactionEvent welcomeEvent = new ReactionEvent("619286757023678501");
+        ReactionEvent welcomeEvent = new ReactionEvent("619286757023678501");
 
         client.useDefaultGame();
         client.setOwnerId("127899667584385024");
@@ -26,6 +30,7 @@ public class  Main extends ListenerAdapter {
                 new Welcome(),
                 new Disappointment()
         );
+
 
 
 
