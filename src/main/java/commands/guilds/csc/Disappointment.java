@@ -1,4 +1,4 @@
-package commands;
+package commands.guilds.csc;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
