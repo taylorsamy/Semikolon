@@ -5,6 +5,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 import eventListeners.ReactionEvent;
 import net.dv8tion.jda.core.entities.Emote;
 import utils.GuildUtils;
+import utils.ReactionEventUtils;
 
 public class Welcome extends Command {
 
@@ -54,14 +55,7 @@ public class Welcome extends Command {
                     "\nCOMP-2531 <:2531:619280409532039187>" +
                     "\nCOMP-2541 <:2541:619280409515261952>" +
                     "\nJPNS-1105 <:jpns1:619280409498484736>", message -> {
-                message.addReaction(comp1501).queue();
-                message.addReaction(comp1502).queue();
-                message.addReaction(comp2511).queue();
-                message.addReaction(math1505).queue();
-                message.addReaction(comp2421).queue();
-                message.addReaction(comp2431).queue();
-                message.addReaction(comp2441).queue();
-                message.addReaction(jpns1105).queue();
+                ReactionEventUtils.addReactions(message, comp1501, comp1502, comp2421, comp2431, comp2441, comp2511, math1505, jpns1105);
                 reactionEvent = new ReactionEvent(message.getId());
                 event.getJDA().addEventListener(reactionEvent);
             });
