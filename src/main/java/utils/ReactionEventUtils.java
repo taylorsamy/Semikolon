@@ -36,7 +36,7 @@ public class ReactionEventUtils {
     public static String loadMessageIdFromFile(String path){ //TODO WTF am I even trying to do?
 
 
-        return null;
+        return "ID";
     }
 
 }
