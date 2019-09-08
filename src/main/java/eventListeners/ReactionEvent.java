@@ -17,6 +17,11 @@ public class ReactionEvent extends ListenerAdapter {
         this.messageID = messageID;
     }
 
+    //TODO abstract out all this junk so that this one class can be used for multiple messages. Maybe use a map of some sort?
+    //current thought is to have a map and a method that adds an emote and role to said map, then just add roles dynamically when needed. Could have
+    //a different map for each guild
+
+    //TODO later on, maybe have a command to update this from the front end, make it also edit the message to show the new roles
 
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
