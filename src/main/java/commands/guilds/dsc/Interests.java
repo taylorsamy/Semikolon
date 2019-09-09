@@ -2,7 +2,8 @@ package commands.guilds.dsc;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import net.dv8tion.jda.core.entities.Emote;
+import net.dv8tion.jda.api.entities.Emote;
+
 import utils.GuildUtils;
 import utils.ReactionEventUtils;
 
@@ -18,6 +19,13 @@ public class Interests extends Command {
     @Override
     protected void execute(CommandEvent event) {
         if (event.getGuild().getId().equals(GuildUtils.DSC_GUILD_ID)) {
+
+
+            /****************************/
+
+
+
+            /***********************/
 
             //get Emotes
 

@@ -1,7 +1,8 @@
 package utils;
 
-import net.dv8tion.jda.core.entities.Emote;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.api.entities.Emote;
+import net.dv8tion.jda.api.entities.Message;
+
 
 import java.io.File;
 import java.io.FileWriter;

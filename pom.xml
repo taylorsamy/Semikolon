@@ -6,6 +6,18 @@
     <groupId>cscBot</groupId>
     <artifactId>CSCBot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <repositories>
         <repository>
             <id>jcenter</id>
@@ -17,13 +29,13 @@
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>3.8.1_447</version>
+            <version>4.0.0_46</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.jagrosh</groupId>
             <artifactId>jda-utilities</artifactId>
-            <version>2.1.5</version>
+            <version>3.0.2</version>
             <scope>compile</scope>
             <type>pom</type>
         </dependency>

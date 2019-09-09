@@ -6,11 +6,12 @@ import commands.guilds.csc.Welcome;
 import commands.guilds.dsc.Interests;
 import eventListeners.ReactionEvent;
 import eventListeners.UserJoinEvent;
-import net.dv8tion.jda.core.AccountType;
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.OnlineStatus;
-import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.AccountType;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
 
 import javax.security.auth.login.LoginException;
 
@@ -40,10 +41,7 @@ public class  Main extends ListenerAdapter {
         JDA api = new JDABuilder(AccountType.BOT)
                 .setToken(args[0])
                 .setStatus(OnlineStatus.ONLINE)
-                .addEventListener(waiter)
-                .addEventListener(welcomeEvent)
-                .addEventListener(new UserJoinEvent())
-                .addEventListener(client.build())
+                .addEventListeners(waiter, welcomeEvent, new UserJoinEvent(), client.build())
                 .build();
     }
 
