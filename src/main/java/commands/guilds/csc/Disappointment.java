@@ -23,7 +23,7 @@ public class Disappointment extends Command {
             User sender = event.getAuthor();
             try {
                 User u = event.getGuild().getMemberById(test).getUser();
-                if (u.getName().equals("Computer Science Club")) {
+                if (u.getName().equals("Semikolon")) {
                     event.reply("<@" + sender.getId() + "> is a big meanie!");
                 } else if (u == event.getAuthor()) {
                     event.reply("<@" + sender.getId() + "> is a little confused....");
